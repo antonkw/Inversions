@@ -18,35 +18,41 @@ public class CountInversionsTest {
 
     @Test
     public void test1() {
-        int[] a1 = {2, 4, 1, 3, 5};
+        int[] testArray1 = {2, 4, 1, 3, 5};
         CountInversions countInversions = new CountInversions();
-        countInversions.countInversions(a1);
-
+        countInversions.countInversions(testArray1);
         assertEquals(3, countInversions.getCounter());
     }
 
     @Test
-    public void testTwo() {
-        int[] a2 = {4, 3, 2, 1};
+    public void test2() {
+        int[] testArray2 = {4, 3, 2, 1};
         CountInversions countInversions = new CountInversions();
-        countInversions.countInversions(a2);
-
+        countInversions.countInversions(testArray2);
         assertEquals(6, countInversions.getCounter());
     }
 
     @Test
-    public void testThree() {
-        int[] a3 = {1, 2, 3, 4};
+    public void test3() {
+        int[] testArray3 = {1, 2, 3, 4};
         CountInversions countInversions = new CountInversions();
-        countInversions.countInversions(a3);
+        countInversions.countInversions(testArray3);
         assertEquals(0, countInversions.getCounter());
     }
 
     @Test
-    public void testFour() {
-        int[] a3 = {3, 3, 3, 3};
+    public void test4() {
+        int[] testArray4 = {3, 3, 3, 3};
         CountInversions countInversions = new CountInversions();
         exception.expect(InputMismatchException.class);
-        countInversions.countInversions(a3);
+        countInversions.countInversions(testArray4);
+    }
+
+    @Test
+    public void test5() {
+        int[] testArray5 = {5, 2, 10, 8, 1, 9, 4, 3, 6, 7};
+        CountInversions countInversions = new CountInversions();
+        countInversions.countInversions(testArray5);
+        assertEquals(22, countInversions.getCounter());
     }
 }
